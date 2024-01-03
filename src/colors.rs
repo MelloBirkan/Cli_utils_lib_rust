@@ -2,7 +2,7 @@
 //! # Examples:
 //! ```
 //! use cli_utils::colors::*;
-//! println!("{}{}{}", red("Red"), green("Green"), blue("Blue"));
+//! println!("{}{}{} {} {}", red("Red"), green("Green"), blue("Blue"), cyan("Cyan"), bold("Bold"));
 //! ```
 
 /// Returns a string with the ANSI escape code for red.
@@ -10,6 +10,9 @@
 /// ```
 /// use cli_utils::colors::*;
 /// println!("{}", red("Red"));
+/// println!("This is a {} string", red("red"));
+/// println!("This is a {} string", cyan("cyan"));
+/// println!()
 /// ```
 pub fn red(s: &str) -> String {
     format!("\x1b[31m{}\x1b[0m", s)
@@ -64,9 +67,7 @@ pub enum Color {
 ///
 /// `ColorString` allows combining a text with a specific color or style and generating
 /// a formatted version with ANSI codes for display in the terminal.
-///
 /// # Examples
-///
 /// ```
 /// use cli_utils::colors::{ColorString, Color};
 ///

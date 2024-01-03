@@ -16,7 +16,7 @@ use std::io::{BufRead, BufReader};
 /// It will panic if reading from stdin fails.
 /// # Examples:
 /// ```
-/// let input = read_stdin();
+/// let input = cli_utils::read_stdin();
 pub fn read_stdin() -> String {
     // Tipo um namespace
     let stdin = std::io::stdin();
