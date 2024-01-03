@@ -17,3 +17,8 @@ format: ## Format the project
 	@rustup component add rustfmt 2> /dev/null
 	cargo fmt
 
+test: ## Test the project
+	cargo test
+
+doc: ## Generate the documentation
+	cargo doc --no-deps --open
