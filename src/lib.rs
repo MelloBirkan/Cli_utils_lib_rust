@@ -9,6 +9,7 @@
 //! The `read_stdin` function will panic if reading from stdin fails.
 
 pub mod colors;
+pub mod config;
 
 use std::io::{BufRead, BufReader};
 
