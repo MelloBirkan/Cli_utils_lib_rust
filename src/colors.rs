@@ -47,7 +47,7 @@ pub fn reset(s: &str) -> String {
 /// let color = Color::Red;
 /// // Use `color` to set the text color.
 /// ```
-pub enum Color{
+pub enum Color {
     /// Red text.
     Red,
     /// Green text.
@@ -58,7 +58,6 @@ pub enum Color{
     Bold,
     /// Cyan text.
     Cyan,
-
 }
 
 /// A structure that stores a text (`String`) and an associated color or style (`Color`).
@@ -106,5 +105,4 @@ impl ColorString {
     pub fn reset(&mut self) {
         self.colorized = reset(&self.string);
     }
-
 }
