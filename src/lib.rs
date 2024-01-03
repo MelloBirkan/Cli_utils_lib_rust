@@ -8,7 +8,7 @@
 //! # Panics:
 //! The `read_stdin` function will panic if reading from stdin fails.
 
-mod colors;
+pub mod colors;
 
 use std::io::{BufRead, BufReader};
 

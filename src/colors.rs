@@ -27,6 +27,10 @@ pub fn bold(s: &str) -> String {
     format!("\x1b[1m{}\x1b[0m", s)
 }
 
+pub fn cyan(s: &str) -> String {
+    format!("\x1b[36m{}\x1b[0m", s)
+}
+
 pub fn reset(s: &str) -> String {
     format!("\x1b[0m{}\x1b[0m", s)
 }
@@ -52,6 +56,8 @@ pub enum Color{
     Blue,
     /// Bold text.
     Bold,
+    /// Cyan text.
+    Cyan,
 
 }
 
@@ -92,6 +98,7 @@ impl ColorString {
             Color::Green => self.colorized = green(&self.string),
             Color::Blue => self.colorized = blue(&self.string),
             Color::Bold => self.colorized = bold(&self.string),
+            Color::Cyan => self.colorized = cyan(&self.string),
         };
     }
 
